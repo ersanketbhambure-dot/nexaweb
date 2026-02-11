@@ -2,37 +2,35 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
-  const { name, email, message } = await req.json();
+  try {
+    const { name, email, message } = await req.json();
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+    console.log("EMAIL_USER:", process.env.EMAIL_USER);
+    console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Missing");
 
-  await transporter.sendMail({
-  from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-  to: process.env.EMAIL_USER,
-  subject: `New Website Inquiry from ${name}`,
-  text: `
-    New Contact Form Submission:
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    Name: ${name}
-    Email: ${email}
-
-    Message:
-    ${message}
-      `,
-      html: `
-        <h2>New Website Inquiry</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+    await transporter.sendMail({
+      from: `"Website Contact" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      subject: `New Website Inquiry from ${name}`,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
       `,
     });
 
-  return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true });
+
+  } catch (error) {
+    console.error("EMAIL ERROR:", error);
+    return NextResponse.json({ success: false }, { status: 500 });
+  }
 }

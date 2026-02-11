@@ -36,13 +36,18 @@ export default function Hero() {
           transition={{ delay: 1.2 }}
           className="flex justify-center gap-4"
         >
-          <button className="px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition">
+          <a
+            href="#contact"
+            className="px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+          >
             Get Free Consultation
-          </button>
-
-          <button className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-600 transition">
+          </a>
+          <a
+            href="#pricing"
+            className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition"
+          >
             View Pricing
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
