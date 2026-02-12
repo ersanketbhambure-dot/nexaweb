@@ -1,26 +1,67 @@
-export default function Navbar() {
-    return (
-      <nav className="w-full bg-[#0f172a] text-white fixed top-0 z-50 shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-extrabold tracking-wide">
-            <span className="text-white">Nexa</span>
-            <span className="text-blue-500">Web</span>
-            <span className="text-gray-400 text-sm ml-1">Technologies</span>
-          </h1>
+"use client";
 
-          <div className="space-x-8 hidden md:block">
-            <a href="#services" className="hover:text-blue-400 transition">
-              Services
+import { useState } from "react";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Industries", href: "#industries" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        {/* Logo */}
+        <h1 className="text-2xl font-extrabold tracking-wide"> 
+          <span className="text-white">Nexa</span> 
+          <span className="text-blue-500">Web</span> 
+          <span className="text-gray-400 text-sm ml-1">Technologies</span> 
+        </h1>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8 text-sm font-medium text-white">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="relative group"
+            >
+              {link.name}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#pricing" className="hover:text-blue-400 transition">
-              Pricing
-            </a>
-            <a href="#contact" className="hover:text-blue-400 transition">
-              Contact
-            </a>
-          </div>
+          ))}
         </div>
-      </nav>
-    );
-  }
-  
+
+        {/* Mobile Button */}
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-[#0f172a] px-6 pb-6 space-y-4 text-white">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="block text-sm"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+}

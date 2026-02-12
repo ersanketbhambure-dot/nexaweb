@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white flex items-center justify-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-gradient-to-br from-[#0f172a] via-[#111827] to-[#1e293b] text-white flex items-center justify-center pt-20 overflow-hidden">
 
       {/* Gradient Background Blur */}
       <div className="absolute w-72 h-72 bg-blue-600 opacity-20 rounded-full blur-3xl top-40 left-20 animate-pulse"></div>
