@@ -5,29 +5,29 @@ import { motion } from "framer-motion";
 export default function WhyChoose() {
   const features = [
     {
-      title: "Fast Delivery",
-      desc: "Most business websites are delivered within 5–7 working days without compromising quality.",
+      title: "Performance-First",
+      desc: "Every platform is engineered for speed and reliability from day one, optimized to compete at scale.",
       icon: "⚡",
     },
     {
-      title: "Modern Design",
-      desc: "Clean, responsive and conversion-focused designs tailored for today’s digital audience.",
-      icon: "🎨",
+      title: "Scalable Architecture",
+      desc: "Clean code and modern practices built for long-term growth without technical rework.",
+      icon: "🏗️",
     },
     {
-      title: "Affordable Pricing",
-      desc: "Transparent packages designed specifically for businesses with a ₹20k–₹30k budget.",
-      icon: "💰",
+      title: "Strategic Partnership",
+      desc: "We invest in understanding your business and vision, providing guidance beyond delivery.",
+      icon: "🤝",
     },
     {
-      title: "Ongoing Support",
-      desc: "We provide continuous support and guidance even after your website goes live.",
-      icon: "🛠",
+      title: "Production-Ready",
+      desc: "Launch with confidence, monitor with clarity, and scale with certainty.",
+      icon: "🚀",
     },
   ];
 
   return (
-    <section className="py-24 bg-gray-100 text-gray-900">
+    <section id="why-choose-us" className="py-24 bg-gray-100 text-gray-900">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -36,7 +36,7 @@ export default function WhyChoose() {
           viewport={{ once: true }}
           className="text-4xl font-bold mb-16"
         >
-          Why Choose NexaWeb Technologies
+          Why We're Different
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-10">

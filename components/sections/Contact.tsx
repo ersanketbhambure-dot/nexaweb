@@ -1,20 +1,55 @@
 "use client";
 import { useState } from "react";
 
+type ContactForm = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 export default function Contact() {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<ContactForm>({
     name: "",
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(form),
-    });
-    alert("Message Sent!");
+    setStatus("loading");
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const payload = (await response.json()) as {
+          errors?: string[];
+        };
+        setStatus("error");
+        setErrorMessage(
+          payload.errors?.[0] ??
+            "Something went wrong. Please try again."
+        );
+        return;
+      }
+
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("Unable to send your message right now.");
+    }
   };
 
   return (
@@ -29,6 +64,8 @@ export default function Contact() {
             type="text"
             placeholder="Your Name"
             className="w-full p-4 border rounded-lg"
+            value={form.name}
+            required
             onChange={(e) =>
               setForm({ ...form, name: e.target.value })
             }
@@ -37,6 +74,8 @@ export default function Contact() {
             type="email"
             placeholder="Your Email"
             className="w-full p-4 border rounded-lg"
+            value={form.email}
+            required
             onChange={(e) =>
               setForm({ ...form, email: e.target.value })
             }
@@ -45,15 +84,26 @@ export default function Contact() {
             placeholder="Your Message"
             rows={5}
             className="w-full p-4 border rounded-lg"
+            value={form.message}
+            required
             onChange={(e) =>
               setForm({ ...form, message: e.target.value })
             }
           />
+          {status === "success" && (
+            <p className="text-sm text-green-600">
+              Thanks! Your message has been sent.
+            </p>
+          )}
+          {status === "error" && errorMessage && (
+            <p className="text-sm text-red-600">{errorMessage}</p>
+          )}
           <button
             type="submit"
-            className="px-8 py-3 bg-blue-600 text-white rounded-lg"
+            disabled={status === "loading"}
+            className="px-8 py-3 bg-blue-600 text-white rounded-lg disabled:opacity-60"
           >
-            Send Message
+            {status === "loading" ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>

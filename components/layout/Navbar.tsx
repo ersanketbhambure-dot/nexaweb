@@ -9,13 +9,17 @@ export default function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Industries", href: "#industries" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Technology", href: "#technology" },
+    { name: "Clients", href: "#industries" },
+    { name: "Why Choose Us", href: "#why-choose-us" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800">
+    <nav
+      aria-label="Primary"
+      className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800"
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
@@ -40,6 +44,10 @@ export default function Navbar() {
 
         {/* Mobile Button */}
         <button
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
           className="md:hidden text-white text-2xl"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -49,7 +57,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#0f172a] px-6 pb-6 space-y-4 text-white">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-[#0f172a] px-6 pb-6 space-y-4 text-white"
+        >
           {links.map((link) => (
             <a
               key={link.name}

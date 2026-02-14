@@ -26,26 +26,31 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-gray-600 max-w-2xl mx-auto mb-16"
         >
-          We create modern, high-performance websites designed
-          to convert visitors into customers.
+          We engineer high-performance digital products that deliver growth
+          and reliability.
         </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 gap-10">
           {[
             {
               icon: "💻",
-              title: "Business Website Development",
-              desc: "Custom-built responsive websites for clinics, small businesses, and service providers.",
+              title: "High-Performance Business Websites",
+              desc: "Conversion-optimized sites for local businesses with SEO, speed, and mobile-first design.",
+            },
+            {
+              icon: "🚀",
+              title: "SaaS & Product Development",
+              desc: "Scalable applications built with clean architecture, security, and production-grade reliability.",
             },
             {
               icon: "⚡",
-              title: "Performance Optimization",
-              desc: "Fast-loading, SEO-friendly websites built for high performance and better Google ranking.",
+              title: "Performance Optimization & Scaling",
+              desc: "Speed audits, database optimization, and infrastructure tuning for high-traffic platforms.",
             },
             {
               icon: "🛠",
-              title: "Website Maintenance & Support",
-              desc: "Ongoing updates, security monitoring, and technical support to keep your website running smoothly.",
+              title: "Production Engineering & Support",
+              desc: "Ongoing monitoring, security hardening, and strategic guidance for long-term growth.",
             },
           ].map((service, index) => (
             <motion.div

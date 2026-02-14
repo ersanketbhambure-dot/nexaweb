@@ -15,19 +15,24 @@ export default function About() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold mb-6">
-            About NexaWeb Technologies
+            Engineering-Driven Web & SaaS Solutions
           </h2>
 
           <p className="text-gray-600 mb-6">
-            NexaWeb Technologies is a modern web development company
-            focused on building professional, high-performance websites
-            for growing businesses.
+            NexaWeb Technologies engineers high-performance digital platforms —
+            from conversion-focused business websites to scalable SaaS
+            applications built for long-term growth.
+          </p>
+
+          <p className="text-gray-600 mb-6">
+            We collaborate with ambitious local businesses and product teams to
+            deliver production-ready systems grounded in clean architecture,
+            speed, and reliability.
           </p>
 
           <p className="text-gray-600">
-            We combine clean design, fast development and transparent
-            pricing to deliver websites that help businesses establish
-            a strong online presence without exceeding their budget.
+            Our approach is performance-first — ensuring every product is built
+            to scale, secure by design, and ready for real-world growth.
           </p>
         </motion.div>
 
@@ -39,13 +44,15 @@ export default function About() {
           viewport={{ once: true }}
           className="bg-gray-100 p-10 rounded-xl shadow-lg"
         >
-          <h3 className="text-2xl font-semibold mb-4">
-            Our Mission
-          </h3>
-
+          <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+          <p className="text-gray-600 mb-6">
+            To engineer fast, reliable, and scalable digital products that
+            empower businesses to grow with clarity and confidence.
+          </p>
+          <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
           <p className="text-gray-600">
-            To empower businesses with affordable, modern and scalable
-            web solutions that drive growth and digital credibility.
+            To set a new standard in performance-driven web and SaaS
+            engineering.
           </p>
         </motion.div>
       </div>
