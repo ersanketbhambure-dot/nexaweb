@@ -11,8 +11,8 @@ export default function Commitment() {
   ];
 
   return (
-    <section className="py-20 bg-[#0f172a] text-white">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">
+    <section className="py-16 sm:py-20 bg-[#0f172a] text-white">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-6 sm:gap-10 text-center">
         {stats.map((stat, index) => (
           <motion.div
             key={index}

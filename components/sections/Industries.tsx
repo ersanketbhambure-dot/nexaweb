@@ -19,7 +19,7 @@ const clients = [
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-24 bg-slate-950 text-white">
+    <section id="industries" className="py-16 sm:py-24 bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,10 +28,10 @@ export default function Industries() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Modern Websites For Growing Businesses
           </h2>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
             We combine clean design, strong messaging, and reliable engineering
             to help brands stand out and convert visitors into customers.
           </p>
@@ -49,7 +49,7 @@ export default function Industries() {
           </h3>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
           {clients.map((client, index) => (
             <motion.div
               key={client.title}
@@ -57,7 +57,7 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-slate-900 p-8 rounded-2xl border border-slate-800"
+              className="bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-800"
             >
               <h4 className="text-xl font-semibold mb-3">
                 {client.title}

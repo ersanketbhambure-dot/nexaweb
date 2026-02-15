@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-24 bg-white text-gray-900"
+      className="py-16 sm:py-24 bg-white text-gray-900"
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.h2
@@ -14,7 +14,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-6"
+          className="text-3xl sm:text-4xl font-bold mb-6"
         >
           Our Services
         </motion.h2>
@@ -24,13 +24,13 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-gray-600 max-w-2xl mx-auto mb-16"
+          className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-16"
         >
           We engineer high-performance digital products that deliver growth
           and reliability.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
           {[
             {
               icon: "💻",
@@ -59,7 +59,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="p-8 rounded-xl shadow-lg hover:shadow-2xl transition"
+              className="p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-4">

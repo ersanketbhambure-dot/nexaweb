@@ -26,7 +26,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-slate-300 text-lg mb-8"
+            className="text-slate-300 text-base sm:text-lg mb-8 max-w-xl mx-auto lg:mx-0"
           >
             From local businesses to SaaS startups, we deliver fast, scalable
             web products with a performance-first foundation.
@@ -40,13 +40,13 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition"
+              className="w-full sm:w-auto px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition"
             >
               Book a Strategy Call
             </a>
             <a
               href="#technology"
-              className="px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition"
+              className="w-full sm:w-auto px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition"
             >
               View Capabilities
             </a>

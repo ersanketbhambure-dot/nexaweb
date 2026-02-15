@@ -20,13 +20,17 @@ export default function Navbar() {
       aria-label="Primary"
       className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         
         {/* Logo */}
-        <h1 className="text-2xl font-extrabold tracking-wide"> 
-          <span className="text-white">Nexa</span> 
-          <span className="text-blue-500">Web</span> 
-          <span className="text-gray-400 text-sm ml-1">Technologies</span> 
+        <h1 className="flex flex-col items-start justify-center gap-0.5 self-center">
+          <span className="text-xl sm:text-2xl font-extrabold tracking-wide leading-none">
+            <span className="text-white">Nexa</span>
+            <span className="bg-gradient-to-br from-[#38bdf8] to-[#a855f7] bg-clip-text text-transparent">
+              Web
+            </span>
+          </span>
+          <span className="text-gray-400 text-[11px] sm:text-xs leading-none">Technologies</span>
         </h1>
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-sm font-medium text-white">
@@ -48,10 +52,10 @@ export default function Navbar() {
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-xl"
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
+          {isOpen ? "✕" : "☰"}
         </button>
       </div>
 
@@ -59,14 +63,14 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden bg-[#0f172a] px-6 pb-6 space-y-4 text-white"
+          className="md:hidden bg-[#0f172a] px-6 pt-2 pb-4 space-y-3 text-white text-sm border-t border-slate-800"
         >
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block text-sm"
+              className="block py-2 border-b border-slate-800/70 last:border-b-0"
             >
               {link.name}
             </a>

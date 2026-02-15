@@ -5,7 +5,6 @@ import Commitment from "@/components/sections/Commitment";
 import Technology from "@/components/sections/Technology";
 import Services from "@/components/sections/Services";
 import WhyChoose from "@/components/sections/WhyChoose";
-import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";

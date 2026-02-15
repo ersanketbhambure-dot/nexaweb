@@ -47,7 +47,7 @@ const saasStack = [
 
 export default function Technology() {
   return (
-    <section id="technology" className="py-24 bg-slate-950 text-white">
+    <section id="technology" className="py-16 sm:py-24 bg-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,22 +56,22 @@ export default function Technology() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Technology Stack
           </h2>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
             Premium delivery with performance, scalability, and reliability at
             the core.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-slate-900 p-8 rounded-2xl border border-slate-800"
+            className="bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-800"
           >
             <p className="text-sm uppercase tracking-[0.25em] text-slate-400">
               For Business Websites
@@ -101,7 +101,7 @@ export default function Technology() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="bg-slate-900 p-8 rounded-2xl border border-slate-800"
+            className="bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-800"
           >
             <p className="text-sm uppercase tracking-[0.25em] text-slate-400">
               For SaaS & Scalable Products

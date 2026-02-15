@@ -53,13 +53,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-16 sm:py-24 bg-white">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-10">
           Get In Touch
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           <input
             type="text"
             placeholder="Your Name"
@@ -101,7 +101,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="px-8 py-3 bg-blue-600 text-white rounded-lg disabled:opacity-60"
+            className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white rounded-lg disabled:opacity-60"
           >
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
