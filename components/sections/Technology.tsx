@@ -21,33 +21,32 @@ const businessStack = [
   "AWS/Vercel",
 ];
 
-const saasBenefits = [
-  "Scalable architecture built for growth",
-  "Secure APIs and robust data models",
-  "Performance tuned for speed and uptime",
-  "Engineering practices that ship reliably",
+const webDevelopmentBenefits = [
+  "Custom builds tailored to your brand and goals",
+  "Clean front-end development for smooth user journeys",
+  "Easy content updates and flexible site structure",
+  "Reliable delivery with modern development standards",
 ];
 
-const saasStack = [
-  "GoLang",
-  "PostgreSQL",
-  "REST APIs",
+const webDevelopmentStack = [
   "Next.js",
+  "Responsive UI Development",
+  "Landing Page Systems",
   "TypeScript",
-  "AWS/Vercel",
-  "Docker/Kubernetes",
-  "CI/CD Pipelines",
-  "AI Integration",
-  "Monitoring & Logging",
-  "Security Best Practices",
+  "Tailwind CSS",
+  "Technical SEO",
+  "Animations & Interactions",
+  "CMS Integration",
+  "Lead Generation Forms",
+  "Deployment & Hosting",
+  "Analytics Setup",
   "Performance Optimization",
-  "Scalable Infrastructure",
-
+  "Security Best Practices",
 ];
 
 export default function Technology() {
   return (
-    <section id="technology" className="py-16 sm:py-24 bg-slate-950 text-white">
+    <section id="technology" className="pt-16 pb-8 sm:pt-24 sm:pb-12 bg-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,8 +59,8 @@ export default function Technology() {
             Technology Stack
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
-            Premium delivery with performance, scalability, and reliability at
-            the core.
+            Modern website delivery with performance, reliability, and clean
+            implementation at the core.
           </p>
         </motion.div>
 
@@ -104,18 +103,18 @@ export default function Technology() {
             className="bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-800"
           >
             <p className="text-sm uppercase tracking-[0.25em] text-slate-400">
-              For SaaS & Scalable Products
+              For Custom Web Development
             </p>
             <h3 className="text-2xl font-semibold mt-3 mb-4">
-              Built to scale with engineering rigor
+              Flexible builds for modern business needs
             </h3>
             <ul className="text-slate-300 text-sm space-y-2 mb-6">
-              {saasBenefits.map((item) => (
+              {webDevelopmentBenefits.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-2">
-              {saasStack.map((item) => (
+              {webDevelopmentStack.map((item) => (
                 <span
                   key={item}
                   className="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-200 border border-slate-700"
@@ -126,16 +125,6 @@ export default function Technology() {
             </div>
           </motion.div>
         </div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center text-slate-300 mt-12"
-        >
-          Built for speed, engineered for trust.
-        </motion.p>
       </div>
     </section>
   );

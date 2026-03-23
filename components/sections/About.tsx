@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import BrandName from "@/components/ui/BrandName";
 
 export default function About() {
   return (
@@ -15,24 +16,25 @@ export default function About() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Engineering-Driven Web & SaaS Solutions
+            Modern Website Design & Web Development
           </h2>
 
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-            NexaWeb Technologies engineers high-performance digital platforms —
-            from conversion-focused business websites to scalable SaaS
-            applications built for long-term growth.
+            <BrandName nexaClassName="text-gray-600" />
+            {" "}creates modern, high-performance websites that help
+            businesses build trust, generate leads, and stand out online.
           </p>
 
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-            We collaborate with ambitious local businesses and product teams to
-            deliver production-ready systems grounded in clean architecture,
-            speed, and reliability.
+            We work with growing businesses to deliver polished web experiences
+            grounded in speed, usability, responsive design, and reliable
+            development practices.
           </p>
 
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            Our approach is performance-first — ensuring every product is built
-            to scale, secure by design, and ready for real-world growth.
+            Our approach is performance-first, making every website easy to
+            navigate, quick to load, secure by design, and ready to support
+            real business goals.
           </p>
         </motion.div>
 
@@ -46,13 +48,13 @@ export default function About() {
         >
           <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-            To engineer fast, reliable, and scalable digital products that
-            empower businesses to grow with clarity and confidence.
+            To build fast, modern, and reliable websites that help businesses
+            present themselves with clarity and confidence.
           </p>
           <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            To set a new standard in performance-driven web and SaaS
-            engineering.
+            To set a higher standard for modern website design and dependable
+            web development.
           </p>
         </motion.div>
       </div>

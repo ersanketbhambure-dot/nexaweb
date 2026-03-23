@@ -6,12 +6,12 @@ export default function WhyChoose() {
   const features = [
     {
       title: "Performance-First",
-      desc: "Every platform is engineered for speed and reliability from day one, optimized to compete at scale.",
+      desc: "Every website is built for speed, smooth browsing, and dependable performance from day one.",
       icon: "⚡",
     },
     {
-      title: "Scalable Architecture",
-      desc: "Clean code and modern practices built for long-term growth without technical rework.",
+      title: "Modern Development",
+      desc: "Clean code, responsive layouts, and current web practices that keep your site polished and maintainable.",
       icon: "🏗️",
     },
     {
@@ -20,8 +20,8 @@ export default function WhyChoose() {
       icon: "🤝",
     },
     {
-      title: "Production-Ready",
-      desc: "Launch with confidence, monitor with clarity, and scale with certainty.",
+      title: "Launch-Ready",
+      desc: "Go live with confidence through careful implementation, quality checks, and dependable support.",
       icon: "🚀",
     },
   ];

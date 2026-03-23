@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import BrandName from "@/components/ui/BrandName";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +24,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         
         {/* Logo */}
-        <h1 className="flex flex-col items-start justify-center gap-0.5 self-center">
-          <span className="text-xl sm:text-2xl font-extrabold tracking-wide leading-none">
-            <span className="text-white">Nexa</span>
-            <span className="bg-gradient-to-br from-[#38bdf8] to-[#a855f7] bg-clip-text text-transparent">
-              Web
-            </span>
-          </span>
-          <span className="text-gray-400 text-[11px] sm:text-xs leading-none">Technologies</span>
+        <h1 className="flex items-center justify-center self-center">
+          <BrandName className="text-xl sm:text-2xl font-extrabold tracking-wide leading-none" />
         </h1>
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-sm font-medium text-white">

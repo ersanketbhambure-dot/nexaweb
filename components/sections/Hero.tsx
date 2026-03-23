@@ -19,7 +19,7 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
           >
-            High-Performance Web & SaaS, Built to Scale
+            Modern Websites Built for Speed, Trust, and Growth
           </motion.h1>
 
           <motion.p
@@ -28,8 +28,8 @@ export default function Hero() {
             transition={{ duration: 1 }}
             className="text-slate-300 text-base sm:text-lg mb-8 max-w-xl mx-auto lg:mx-0"
           >
-            From local businesses to SaaS startups, we deliver fast, scalable
-            web products with a performance-first foundation.
+            We build modern business websites that load fast, look polished,
+            and help brands turn visitors into real customers.
           </motion.p>
 
           <motion.div
@@ -52,7 +52,7 @@ export default function Hero() {
             </a>
           </motion.div>
           <p className="text-sm text-slate-400 mt-4">
-            Launch in weeks, not months.
+            Modern web presence, delivered with clarity.
           </p>
         </div>
 
@@ -65,8 +65,8 @@ export default function Hero() {
           <div className="grid gap-4">
             {[
               "<2s Load Time",
-              "Scalable Architecture",
-              "Secure & Production Ready",
+              "Mobile-First Design",
+              "Secure & Reliable",
               "SEO Optimized",
             ].map((item) => (
               <div

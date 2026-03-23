@@ -1,7 +1,7 @@
 export const siteConfig = {
-	name: "NexaWeb Technologies",
+	name: "Nexa WebCraft",
 	description:
-		"NexaWeb Technologies builds modern, high-performance business websites for growing brands.",
+		"Nexa WebCraft builds modern, high-performance websites and web experiences for growing businesses.",
 	url: "https://nexawebtechnologies.com",
 	ogImage: "/og-image.svg",
 	keywords: [

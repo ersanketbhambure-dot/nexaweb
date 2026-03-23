@@ -10,16 +10,16 @@ const clients = [
     highlights: ["Lead-focused design", "SEO-ready pages", "Fast delivery"],
   },
   {
-    title: "SaaS Startups & Product Teams",
+    title: "Service Businesses & Agencies",
     description:
-      "We help SaaS teams launch marketing sites, product pages, and onboarding experiences that convert.",
-    highlights: ["Conversion copy", "Product-led UX", "Scalable structure"],
+      "We create professional websites for agencies and service-based brands that need credibility, clarity, and stronger conversions.",
+    highlights: ["Clear positioning", "Modern UI", "Conversion-focused structure"],
   },
 ];
 
 export default function Industries() {
   return (
-    <section id="industries" className="py-16 sm:py-24 bg-slate-950 text-white">
+    <section id="industries" className="pt-8 pb-16 sm:pt-12 sm:pb-24 bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

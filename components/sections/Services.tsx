@@ -26,8 +26,8 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-16"
         >
-          We engineer high-performance digital products that deliver growth
-          and reliability.
+          We design and develop modern websites that balance speed, design,
+          usability, and long-term reliability.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
@@ -39,18 +39,18 @@ export default function Services() {
             },
             {
               icon: "🚀",
-              title: "SaaS & Product Development",
-              desc: "Scalable applications built with clean architecture, security, and production-grade reliability.",
+              title: "Custom Website Development",
+              desc: "Tailored websites built around your brand, goals, and customer journey with clean, maintainable code.",
             },
             {
               icon: "⚡",
-              title: "Performance Optimization & Scaling",
-              desc: "Speed audits, database optimization, and infrastructure tuning for high-traffic platforms.",
+              title: "Performance Optimization",
+              desc: "Speed improvements, technical cleanup, and front-end optimization for faster, smoother user experiences.",
             },
             {
               icon: "🛠",
-              title: "Production Engineering & Support",
-              desc: "Ongoing monitoring, security hardening, and strategic guidance for long-term growth.",
+              title: "Website Support & Maintenance",
+              desc: "Ongoing updates, security improvements, bug fixes, and dependable support to keep your site in shape.",
             },
           ].map((service, index) => (
             <motion.div
