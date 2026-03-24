@@ -3,6 +3,12 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const trustItems = [
+    "Direct developer communication",
+    "Clear scope before work starts",
+    "30-day post-launch support",
+  ];
+
   return (
     <section
       id="home"
@@ -13,6 +19,14 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto px-6 relative z-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
         <div className="text-center lg:text-left">
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300 mb-5"
+          >
+            Modern Website Design & Web Development
+          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -42,18 +56,25 @@ export default function Hero() {
               href="#contact"
               className="w-full sm:w-auto px-8 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition"
             >
-              Book a Strategy Call
+              Request a Project Quote
             </a>
             <a
-              href="#technology"
+              href="#process"
               className="w-full sm:w-auto px-8 py-3 border border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition"
             >
-              View Capabilities
+              See How It Works
             </a>
           </motion.div>
-          <p className="text-sm text-slate-400 mt-4">
-            Modern web presence, delivered with clarity.
-          </p>
+          <div className="mt-6 flex flex-wrap gap-3 justify-center lg:justify-start">
+            {trustItems.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm text-slate-200"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
 
         <motion.div

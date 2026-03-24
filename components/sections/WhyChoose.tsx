@@ -20,9 +20,9 @@ export default function WhyChoose() {
       icon: "🤝",
     },
     {
-      title: "Launch-Ready",
-      desc: "Go live with confidence through careful implementation, quality checks, and dependable support.",
-      icon: "🚀",
+      title: "Honest Recommendations",
+      desc: "We keep claims realistic, recommend only what your business actually needs, and avoid hype-heavy sales language.",
+      icon: "🧭",
     },
   ];
 
